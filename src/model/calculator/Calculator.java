@@ -1,4 +1,7 @@
 package model.calculator;
 
-public class Calculator {
+import domain.Taxi;
+
+public interface Calculator<T extends  Taxi> {
+    Integer fullCost(T taxi, Integer sum);
 }
