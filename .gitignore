@@ -81,3 +81,10 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/jetbrains
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
