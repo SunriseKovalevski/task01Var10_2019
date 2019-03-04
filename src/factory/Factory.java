@@ -2,6 +2,6 @@ package factory;
 
 import model.reader.TaxiReader;
 
-public interface class Factory {
+public interface Factory {
     TaxiReader createTaxiReader();
 }
