@@ -13,6 +13,6 @@ public class AndFilter  implements Filter{
 
     @Override
     public boolean check(Taxi taxi) {
-        return a.check(Taxi) && b.check(Taxi);
+        return a.check(taxi) && b.check(taxi);
     }
 }
