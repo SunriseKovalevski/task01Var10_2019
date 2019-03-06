@@ -25,6 +25,7 @@ public class Taxi {
         return speed;
     }
 
+
     public void setSpeed(Integer speed) {
         this.speed = speed;
     }
