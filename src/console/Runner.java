@@ -48,7 +48,7 @@ public class Runner {
 
     public Filter inputFilter() {
         System.out.println("По какому критерию фильтровать?");
-        int i = i;
+        int i = 1;
         for (AbstractFilterFactory factory : filterFactories) {
             System.out.printf("%2d. %s\n", i++, factory.getMenuItem());
         }
