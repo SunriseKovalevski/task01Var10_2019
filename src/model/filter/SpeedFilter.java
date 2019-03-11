@@ -13,6 +13,6 @@ public class SpeedFilter implements Filter{
 
     @Override
     public boolean check(Taxi taxi) {
-        return taxi.getMinSpeed() <= speed && speed <= taxi.getMaxSpeed();
+        return taxi.getSpeed() <= speed;
     }
 }

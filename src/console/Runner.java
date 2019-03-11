@@ -1,6 +1,7 @@
 package console;
 
 import domain.Taxi;
+import model.filter.Filter;
 import model.reader.TaxiReader;
 
 import java.util.HashMap;
