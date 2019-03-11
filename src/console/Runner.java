@@ -28,6 +28,13 @@ public class Runner {
                 order++;
                 filteredTaxi.put(order, taxi);
                 System.out.print(order);
+                System.out.print("Стоимость: ");
+                System.out.println(taxi.getCost());
+                System.out.print("Топливо: ");
+                System.out.println(taxi.getFuelRate());
+                System.out.print("Скорость: ");
+                System.out.println(taxi.getSpeed());
+                System.out.println();
             }
         }
         System.out.println("Выберите машину такси для вывода");
@@ -37,6 +44,7 @@ public class Runner {
             System.out.println("**Начало диапазона*");
             Integer summ = Integer.parseInt(scanner.nextLine());
             Class<Taxi> c = (Class<Taxi>)taxi.getClass();
+
             // СЮДА НЕ ЗАБЫТЬ ВСЕ НАПИСАТЬ
         }
     }
