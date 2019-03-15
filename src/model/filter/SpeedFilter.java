@@ -2,8 +2,6 @@ package model.filter;
 
 import domain.Taxi;
 
-//мне надо диапазон скоростей такта
-
 public class SpeedFilter implements Filter{
     private Integer speed;
 
@@ -13,6 +11,6 @@ public class SpeedFilter implements Filter{
 
     @Override
     public boolean check(Taxi taxi) {
-        return taxi.getSpeed() <= speed;
+        return taxi.getSpeed() >= speed;
     }
 }

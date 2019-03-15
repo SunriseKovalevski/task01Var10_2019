@@ -5,11 +5,11 @@ import model.filter.SpeedFilter;
 
 public class SummFilterFactory extends AbstractFilterFactory {
     public SummFilterFactory() {
-        super("по скорости");
+        super("by speed");
     }
     @Override
     public Filter create() {
-        System.out.print("Введите желаемую скорость: ");
+        System.out.print("Please, input minimal speed: ");
         Integer summ = Integer.parseInt(scanner.nextLine());
         return new SpeedFilter(summ);
     }

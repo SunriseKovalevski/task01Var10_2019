@@ -11,6 +11,6 @@ public class RangeFilter implements  Filter{
 
     @Override
     public boolean check(Taxi taxi){
-        return taxi.getFuelRate() >= range;
+        return taxi.getFuelRate() <= range;
     }
 }

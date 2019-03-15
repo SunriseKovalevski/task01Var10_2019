@@ -27,25 +27,24 @@ public class Runner {
             if (filter.check(taxi)) {
                 order++;
                 filteredTaxi.put(order, taxi);
-                System.out.print(order);
-                System.out.print("Стоимость: ");
+                System.out.print("Taxi number: ");
+                System.out.println(order);
+                System.out.print("Cost: ");
                 System.out.println(taxi.getCost());
-                System.out.print("Топливо: ");
+                System.out.print("Fuel Rate: ");
                 System.out.println(taxi.getFuelRate());
-                System.out.print("Скорость: ");
+                System.out.print("max Speed: ");
                 System.out.println(taxi.getSpeed());
                 System.out.println();
             }
-        }
-        System.out.println("Выберите машину такси для вывода");
+        };
+        System.out.println("Taxopark cost: " + taxiReader.getSumm());
+        System.out.println("Choose taxi for output");
         order = Integer.parseInt(scanner.nextLine());
         Taxi taxi = filteredTaxi.get(order);
         if(taxi != null) {
-            System.out.println("**Начало диапазона*");
-            Integer summ = Integer.parseInt(scanner.nextLine());
-            Class<Taxi> c = (Class<Taxi>)taxi.getClass();
-
-            // СЮДА НЕ ЗАБЫТЬ ВСЕ НАПИСАТЬ
+            System.out.println(taxi.getCost()+" "+taxi.getFuelRate()+ " " + taxi.getSpeed());      
+            //Must write there some famous code
         }
     }
 
@@ -55,12 +54,12 @@ public class Runner {
     };
 
     public Filter inputFilter() {
-        System.out.println("По какому критерию фильтровать?");
+        System.out.println("With what categegory must filtr?");
         int i = 1;
         for (AbstractFilterFactory factory : filterFactories) {
             System.out.printf("%2d. %s\n", i++, factory.getMenuItem());
         }
-        System.out.print("Ваш выбор: ");
+        System.out.print("Your choise: ");
         return filterFactories[Integer.parseInt(scanner.nextLine()) - 1].create();
     }
 

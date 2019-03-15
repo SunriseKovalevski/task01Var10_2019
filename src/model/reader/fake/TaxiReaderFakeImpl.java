@@ -10,11 +10,15 @@ public class TaxiReaderFakeImpl  implements TaxiReader {
     @Override
     public List<Taxi> read() {
         List<Taxi> taxopark = new ArrayList<>();
-        taxopark.add(buildTaxi(100,15,205));
+        taxopark.add(buildTaxi(100, 15, 205));
         taxopark.add(buildTaxi(130, 12, 220));
         taxopark.add(buildTaxi(120, 11, 300));
         taxopark.add(buildTaxi(110, 18, 290));
         return taxopark;
+    }
+    
+    public Integer getSumm() {
+    	return 460;
     }
 
     private void build(Taxi taxi, Integer cost, Integer fuelRate, Integer speed){
